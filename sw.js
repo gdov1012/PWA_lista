@@ -1,11 +1,11 @@
 const CACHE = "offline";
 const FILES =[
     "/",
-    "/index.html",
-    "/app.js",
-    "/manifest.json",
-    "/icons/258.png",
-    "/icons/512.png"
+    "/PWA_lista/index.html",
+    "/PWA_lista/app.js",
+    "/PWA_lista/manifest.json",
+    "/PWA_lista/icons/258.png",
+    "/PWA_lista/icons/512.png"
     ]
 
 self.addEventListener("install", (event) =>{
@@ -17,7 +17,7 @@ self.addEventListener("install", (event) =>{
     });
 
 self.addEventListener("activate", () => {
-caches.open("offline").then((caches) => {
+      caches.open("offline").then((caches) => {
 cache.addAll(FILES);
 });
 });
